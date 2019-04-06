@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Clienti {
+	public final static int NUM_MAX_CLIENTI=1000000;
+	private ArrayList<Cliente>c;
+	
+	public Clienti()
+	{
+		c=new ArrayList<>(NUM_MAX_CLIENTI);
+	}
+	
+	public void addCliente(Cliente cliente)
+	{
+		c.add(cliente);
+	}
+	public void eliminaDipendente(String codice)
+	{
+		Iterator<Cliente>i;
+		for(i=c.iterator(); i.hasNext();)
+		{
+			Cliente cliente= i.next();
+			if(cliente.getCodice_cliente().equals(codice))
+			{
+				i.remove();
+				return;
+			}
+		}
+	}
+	public Cliente cercaClienteCodice(String codice)
+	{
+		for(Cliente cliente:c)
+		{
+			if(cliente.getCodice_cliente().equals(codice))
+			{
+				return cliente;
+			}
+		}
+		return null;
+	}
+	public Cliente cercaClienteNomeCognome(String nome, String cognome)
+	{
+		for(Cliente cliente:c)
+		{
+			if(cliente.getNome().equals(nome) && cliente.getCognome().equals(cognome))
+			{
+				return cliente;
+			}
+		}
+		return null;
+	}
+	public Cliente modificaCliente(String codice)
+	{
+		for(Cliente cliente:c)
+		{
+			if(cliente.getCodice_cliente().equals(codice))
+			{
+				
+			}
+		}
+		return null;
+	}
+}

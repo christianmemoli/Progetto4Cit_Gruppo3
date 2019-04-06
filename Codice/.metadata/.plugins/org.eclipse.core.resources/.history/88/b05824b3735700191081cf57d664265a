@@ -1,0 +1,7 @@
+import java.util.TreeMap;
+
+public class Prenotazione {
+	private TreeMap<String, Volo>v;
+	private TreeMap<String, Cliente>v;
+	
+}

@@ -1,0 +1,15 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente c1=new Cliente("rossi","aldo","ITA","PARMA","03/09/68","0000");
+		Volo v=new Volo("1111","MALPENSA","DUBAI","05/12/2019",15.30,12.50,1000,700);
+		Clienti c=new Clienti();
+		c.addCliente(c1);
+		System.out.println(c.eliminaDipendente("0000"));
+		
+		
+	}
+
+}

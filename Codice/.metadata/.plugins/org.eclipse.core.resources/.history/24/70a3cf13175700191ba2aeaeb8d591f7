@@ -1,0 +1,108 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) throws SomethingException {
+		// TODO Auto-generated method stub
+		Cliente c1=new Cliente();
+		Volo v1=new Volo();
+		Clienti c=new Clienti();
+		Voli v=new Voli();
+		int scelta=0;
+		System.out.println("Benvenuti nel menù a tendina della nostra agenzia di volo. Eseguire una scelta:");
+		System.out.println("1-Per cliente;");
+		System.out.println("2-Per volo;");
+		System.out.println("3-Per prenotazione.");
+		System.out.println("(PREMERE 0 PER USCIRE DAL MENU)");
+		Scanner s1=new Scanner(System.in);
+		do
+		{
+			scelta=s1.nextInt();
+			switch(scelta)
+			{
+			case 1:
+				int scelta2=0;
+				System.out.println("Scegliere l'attività:");
+				System.out.println("1-Aggiunta cliente;");
+				System.out.println("2-Elimina cliente dal codice;");
+				System.out.println("3-Cerca cliente a partire dal codice;");
+				System.out.println("4-Cerca cliente a partire dal nome e cognome;");
+				System.out.println("5-Modifica dati del cliente a partire dal codice;");
+				System.out.println("(PREMERE 0 PER USCIRE DAL MENU)");
+				Scanner s2=new Scanner(System.in);
+				do
+				{
+					System.out.println("Scegliere l'attività:");
+					System.out.println("1-Aggiunta cliente;");
+					System.out.println("2-Elimina cliente dal codice;");
+					System.out.println("3-Cerca cliente a partire dal codice;");
+					System.out.println("4-Cerca cliente a partire dal nome e cognome;");
+					System.out.println("5-Modifica dati del cliente a partire dal codice;");
+					System.out.println("(PREMERE 0 PER USCIRE DAL MENU)");
+					scelta2=s2.nextInt();
+					switch(scelta2)
+					{
+					case 1:
+						Scanner s3=new Scanner(System.in);
+						System.out.print("Nome: ");
+						c1.setNome(s3.nextLine());
+						System.out.print("Cognome: ");
+						c1.setCognome(s3.nextLine());
+						System.out.print("Nazione di nascita: ");
+						c1.setNazione_nascita(s3.nextLine());
+						System.out.print("Città di nascita: ");
+						c1.setCitta_nascita(s3.nextLine());;
+						System.out.print("Data di nascita: ");
+						c1.setData_nascita(s3.nextLine());
+						System.out.print("Codice clietne: ");
+						c1.setCodice_cliente(s3.nextLine());
+						c.addCliente(c1);
+						break;
+					case 2:
+						Scanner s4=new Scanner(System.in);
+						System.out.print("Inserire Il codice del cliente da eliminare: ");
+						c.eliminaCliente(s4.nextLine());
+						break;
+					case 3:
+						Scanner s5=new Scanner(System.in);
+						System.out.print("Inserire Il codice del cliente da cercare: ");
+						System.out.println(c.cercaClienteCodice(s5.nextLine()));
+						break;
+					case 4:
+						Scanner s6=new Scanner(System.in);
+						System.out.print("Inserire Il nome e il cognome del cliente da cercare: ");
+						System.out.println(c.cercaClienteNomeCognome(s6.nextLine(), s6.nextLine()));
+						break;
+					case 5:
+						
+					}
+				}while(scelta2!=0 && scelta2<=5);
+			case 2:
+				int scelta3=0;
+				System.out.println("Scegliere l'attività:");
+				System.out.println("1-Aggiunta volo;");
+				System.out.println("2-Elimina volo dal codice;");
+				System.out.println("3-Cerca volo a partire dal codice;");
+				System.out.println("4-Cerca volo a partire dalle seguenti informazioni(data, aeroporto partenza, aeroporto arrivo, ora partenza);");
+				System.out.println("(PREMERE 0 PER USCIRE DAL MENU)");
+				Scanner s7=new Scanner(System.in);
+				do
+				{
+					System.out.println("Scegliere l'attività:");
+					System.out.println("1-Aggiunta volo;");
+					System.out.println("2-Elimina volo dal codice;");
+					System.out.println("3-Cerca volo a partire dal codice;");
+					System.out.println("4-Cerca volo a partire dalle seguenti informazioni(data, aeroporto partenza, aeroporto arrivo, ora partenza);");
+					System.out.println("(PREMERE 0 PER USCIRE DAL MENU)");
+					scelta3=s7.nextInt();
+					switch(scelta3)
+					{
+					case 1:
+						
+					}
+				}while(scelta3!=0 && scelta3<=5);
+			}
+		}while(scelta!=0 && scelta<=3);
+	}
+
+}
