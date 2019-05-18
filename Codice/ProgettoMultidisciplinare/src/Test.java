@@ -172,6 +172,78 @@ public class Test {
 					}
 				}while(scelta3<=5);
 				break;
+				
+				// DA CORREGGERE (PRENOTAZIONE)
+				// CAMBIA TUTTO CON VARIABILI E METODI DI PRENOTAZIONI
+			case 3:
+				int scelta4=0;
+				Scanner s4=new Scanner(System.in);
+				do
+				{
+					System.out.println("Scegliere l'attività:");
+					System.out.println("1-Aggiunta prenotazione;");
+					System.out.println("2-Elimina prenotazione dal codice volo;");
+					System.out.println("3-Cerca prenotazione a partire dal nome;");
+					System.out.println("(PREMERE 4 PER USCIRE DAL MENU)");
+					
+					int scelta5;
+					Scanner s5=new Scanner(System.in);
+					scelta5 =s5.nextInt();
+					
+					switch(scelta5)
+					{
+					case 1:
+						Scanner s3=new Scanner(System.in);
+						System.out.print("Nome: ");
+						c1.setNome(s3.nextLine());
+						System.out.print("Codice prenotazione: "); // LO GENRIAMO AUTOMATICAMENTE?
+						c1.setCodice_cliente(s3.nextLine());
+						try
+						{
+							c.addCliente(c1);
+						}catch(SomethingException s)
+						{
+							System.out.println(s);
+						}
+						break;
+					case 2:
+						Scanner s6=new Scanner(System.in);
+						System.out.print("Inserire Il codice del cliente da eliminare: ");
+						try
+						{
+							c.eliminaCliente(s5.nextLine());
+						}catch(SomethingException s)
+						{
+							System.out.println(s);
+						}
+						break;
+					case 3:
+						Scanner s8=new Scanner(System.in);
+						System.out.print("Inserire Il codice del cliente da cercare: ");
+						try
+						{
+							System.out.println(c.cercaClienteCodice(s8.nextLine()));
+						}catch(SomethingException s)
+						{
+							System.out.println(s);
+						}
+						break;
+					case 4:
+						Scanner s9=new Scanner(System.in);
+						System.out.print("Inserire Il nome e il cognome del cliente da cercare: ");
+						try
+						{
+							System.out.println(c.cercaClienteNomeCognome(s9.nextLine(), s9.nextLine()));
+						}catch(SomethingException s)
+						{
+							System.out.println(s);
+						}
+						break;
+					case 5:
+						
+					}
+				}while(scelta4<=5);
+				break;
 			}
 		}while(scelta<=3);
 		System.out.println("Grazie per aver scelto la nostra compagnia.");
