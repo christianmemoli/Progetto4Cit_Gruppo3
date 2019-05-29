@@ -9,13 +9,8 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerHome">
    <children>
-      <ImageView fitHeight="410.0" fitWidth="610.0" layoutY="-5.0">
-         <image>
-            <Image url="@img1.jpg" />
-         </image>
-      </ImageView>
       <Text layoutX="24.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PlaneOne" wrappingWidth="395.13671875">
          <font>
             <Font name="Baskerville Old Face" size="60.0" />
@@ -23,7 +18,7 @@
       </Text>
       <BorderPane layoutX="376.0" layoutY="61.0" prefHeight="49.0" prefWidth="200.0">
          <center>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Prenota Volo" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Prenota Volo" BorderPane.alignment="CENTER" fx:id="ButtonPrenota"/>
          </center>
       </BorderPane>
       <AnchorPane layoutX="386.0" layoutY="175.0">

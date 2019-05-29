@@ -55,14 +55,13 @@ public class Clienti extends SomethingException{
 		}
 		return null;
 	}
-	
 	public Cliente modificaCliente(String codice)throws SomethingException
 	{
 		for(Cliente cliente:c)
 		{
 			if(cliente.getCodice_cliente().equals(codice))
 			{
-				// modifica dei dati del cliente
+				
 			}
 		}
 		return null;

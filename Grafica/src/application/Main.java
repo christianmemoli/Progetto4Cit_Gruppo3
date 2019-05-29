@@ -1,23 +1,36 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	public static Stage PrimaryStage;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			//BorderPane root = new BorderPane();
+			//Scene homeScene = new Scene(root,400,400);
+			PrimaryStage=PrimaryStage;
+			Parent rootNode = FXMLLoader.load(getClass().getResource("prova.fxml"));
+			Scene homeScene = new Scene(rootNode,600,400);
+			primaryStage.setScene(homeScene);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void closestage() {
+		PrimaryStage.close();
+	}
+	
+	public static Stage getPrimaryStage() {
+		return PrimaryStage;
 	}
 	
 	public static void main(String[] args) {
