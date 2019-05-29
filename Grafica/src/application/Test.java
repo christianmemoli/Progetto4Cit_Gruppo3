@@ -107,6 +107,19 @@ public class Test {
 						break;
 					case 5:
 						
+						Scanner s7=new Scanner(System.in);
+						System.out.print("Inserire il codice del cliente: ");
+						
+						try
+						{
+							c.modificaCliente(s7.nextLine());
+							System.out.print("Inserire i dati da modificare del cliente: ");
+							
+						}catch(SomethingException s)
+						{
+							System.out.println(s);
+						}
+						break;
 					}
 				}while(scelta2<=5);
 				break;
@@ -263,7 +276,7 @@ public class Test {
 					case 4:
 						
 					}
-				}while(scelta4<=4);
+				}while(scelta4 == 4);
 				break;
 			}
 		}while(scelta<=3);
