@@ -1,13 +1,12 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-
-public class Main extends Application {
+public class Page3 extends Application {
 	
 	public static Stage PrimaryStage;
 	@Override
@@ -15,7 +14,7 @@ public class Main extends Application {
 		try {
 			//BorderPane root = new BorderPane();
 			//Scene homeScene = new Scene(root,400,400);
-			Parent rootNode = FXMLLoader.load(getClass().getResource("prova.fxml"));
+			Parent rootNode = FXMLLoader.load(getClass().getResource("page3.fxml"));
 			Scene homeScene = new Scene(rootNode,600,400);
 			primaryStage.setScene(homeScene);
 			primaryStage.show();

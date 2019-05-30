@@ -6,13 +6,19 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerPage2">
    <children>
+      <ImageView fitHeight="411.0" fitWidth="608.0" layoutX="-6.0" layoutY="-4.0">
+         <image>
+            <Image url="@../../../../aerei-viaggiare-volare.jpg_982521881.jpg" />
+         </image>
+      </ImageView>
       <PasswordField layoutX="78.0" layoutY="123.0" />
       <PasswordField layoutX="78.0" layoutY="186.0" />
       <Text layoutX="78.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci nome utente" />
-      <Button layoutX="76.0" layoutY="227.0" mnemonicParsing="false" text="accedi" />
+      <Button fx:id="accedi" layoutX="76.0" layoutY="227.0" mnemonicParsing="false" text="accedi" />
       <Text layoutX="76.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci password" />
       <Text fill="#00206b" layoutX="76.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password dimenticata?" />
+      <Button fx:id="registrati" layoutX="147.0" layoutY="227.0" mnemonicParsing="false" text="registrati" />
    </children>
 </Pane>
