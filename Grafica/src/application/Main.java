@@ -15,16 +15,17 @@ public class Main extends Application {
 		try {
 			//BorderPane root = new BorderPane();
 			//Scene homeScene = new Scene(root,400,400);
+			PrimaryStage=primaryStage;
 			Parent rootNode = FXMLLoader.load(getClass().getResource("prova.fxml"));
-			Scene homeScene = new Scene(rootNode,600,400);
-			primaryStage.setScene(homeScene);
-			primaryStage.show();
+			Scene homeScene = new Scene(rootNode);
+			PrimaryStage.setScene(homeScene);
+			PrimaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void closestage() {
+    public static void closestage() {
 		PrimaryStage.close();
 	}
 	
@@ -35,4 +36,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
 }

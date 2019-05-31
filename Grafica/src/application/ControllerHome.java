@@ -14,14 +14,14 @@ public class ControllerHome {
     public void initialize(){
      
     	ButtonPrenota.addEventHandler(ActionEvent.ACTION, ActionEvent ->{
-    		Main.closestage();
-    		new Page2().start(Main.getPrimaryStage());
+    		PrenotaVoloButton(ActionEvent);
     	});
    
     }
  
-    void PrenotaVoloButton(ActionEvent event) {
+   @FXML public void PrenotaVoloButton(ActionEvent event) {
     	
-    	
+	    Main.closestage();
+		new Page2().start(Main.getPrimaryStage());
     }
 }

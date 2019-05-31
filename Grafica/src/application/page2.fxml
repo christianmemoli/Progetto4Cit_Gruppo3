@@ -8,9 +8,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerPage2">
    <children>
-      <ImageView fitHeight="411.0" fitWidth="608.0" layoutX="-6.0" layoutY="-4.0">
+      <ImageView fitHeight="411.0" fitWidth="615.0" layoutX="-7.0" layoutY="-6.0">
          <image>
-            <Image url="@../../../../aerei-viaggiare-volare.jpg_982521881.jpg" />
+            <Image url="@aerei-viaggiare-volare.jpg_982521881.jpg" />
          </image>
       </ImageView>
       <PasswordField layoutX="78.0" layoutY="123.0" />

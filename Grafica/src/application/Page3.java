@@ -14,10 +14,11 @@ public class Page3 extends Application {
 		try {
 			//BorderPane root = new BorderPane();
 			//Scene homeScene = new Scene(root,400,400);
+			PrimaryStage=primaryStage;
 			Parent rootNode = FXMLLoader.load(getClass().getResource("page3.fxml"));
-			Scene homeScene = new Scene(rootNode,600,400);
-			primaryStage.setScene(homeScene);
-			primaryStage.show();
+			Scene homeScene = new Scene(rootNode);
+			PrimaryStage.setScene(homeScene);
+			PrimaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

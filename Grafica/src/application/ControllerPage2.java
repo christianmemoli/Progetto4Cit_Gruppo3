@@ -8,11 +8,10 @@ import javafx.scene.control.Button;
 
 public class ControllerPage2 {
 
-    @FXML
-    private Button accedi;
-    private Button registrati;
+    @FXML private Button accedi;
+    @FXML private Button registrati;
 
-    public void initialize(){
+    public void initialize()throws Exception{
      
     	accedi.addEventHandler(ActionEvent.ACTION, ActionEvent ->{
     		Page2.closestage();
